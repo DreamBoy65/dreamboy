@@ -23,7 +23,7 @@ export default async function Home() {
 
         <div className="w-full flex justify-center mt-[10px] mb-[10px]">
           <img
-            className="headimg w-[80%] h-auto rounded-full ring-1 ring-offset-8 ring-offset-black ring-[#9745f5]"
+            className="headimg w-[50%] h-auto rounded-full ring-1 ring-offset-8 ring-offset-black ring-[#9745f5]"
             src={avatar}
           />
         </div>
