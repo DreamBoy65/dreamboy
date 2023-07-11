@@ -1,8 +1,9 @@
-"use client";
+import axios from "axios";
+let username = "DreamBoy65";
+let token = "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";
+
 export default async function Git() {
-  const user = await fetch("https://dreamboy.vercel.app/api/github").then(
-    (res) => res.json()
-  );
+  const user = await getUser()
 
   let str = `${user.data.login}'s Github Stats`;
   return (
@@ -53,4 +54,33 @@ export default async function Git() {
       </div>
     </div>
   );
+}
+
+async function getUser() {
+  let data = await Fetch("user");
+  let repos = await Fetch("users/DreamBoy65/repos");
+  let stars = repos.map((c) => c.stargazers_count).reduce((a, b) => a + b, 0);
+  let issues = repos.map((c) => c.open_issues).reduce((a, b) => a + b, 0);
+  let commitsCount = 0;
+  /*
+ for (const r of repos) {
+    let cc = await fetch(`repos/DreamBoy65/${r.name}/commits`);
+    commitsCount += cc.length;
+  }
+  */
+
+  return { data, repos, issues, commitsCount, stars };
+}
+
+async function Fetch(path) {
+  return await axios
+    .get("https://api.github.com/" + path, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+      },
+    })
+    .then((data) => data.data)
+    .catch((e) => null);
 }
