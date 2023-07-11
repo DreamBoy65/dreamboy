@@ -17,7 +17,7 @@ export default async function Home() {
       <div className="w-full flex flex-col mt-10 items-center">
         <div className="w-full flex justify-end mr-[15px] text-right mb-[5px]">
           <div className="w-[60%]">
-            Hello im {data.discord_user.global_name}, Nice to meet y'all. If you
+            Hello im {data.discord_user.global_name}, Nice to meet yall. If you
             want to talk to me you can just DM me on discord or instagram.
           </div>
         </div>
