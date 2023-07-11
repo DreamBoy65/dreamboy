@@ -1,5 +1,3 @@
-import Git from "@comp/git.js";
-import Npm from "@comp/npm.js";
 
 export default async function Home() {
   let { data } = await fetch(
@@ -39,10 +37,10 @@ export default async function Home() {
 
       <div className="flex md:flex-row flex-col items-center justify-center md:gap-[20px]">
         <div className="w-[390px] ring-2 ring-offset-4 ring-offset-black ring-[#9745f5] rounded-[5px] m-[5px] mt-[20px] mb-[10px] h-[130px]">
-          <Git />
+          
         </div>
         <div className="w-[390px] ring-2 ring-offset-4 ring-offset-black ring-[#9745f5] rounded-[5px] m-[5px] mt-[20px] mb-[10px] h-[130px]">
-          <Npm />
+        
         </div>
       </div>
     </main>

@@ -1,6 +1,6 @@
 "use client";
 export default async function Git() {
-  const user = await fetch("https://dreamboyx.vercel.app/api/github").then(
+  const user = await fetch("https://dreamboy.vercel.app/api/github").then(
     (res) => res.json()
   );
 
