@@ -1,9 +1,9 @@
 import axios from "axios";
 let username = "DreamBoy65";
-let token = "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";
+let token = "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";
 
 export default async function Git() {
-  const user = await getUser()
+  const user = await getUser();
 
   let str = `${user.data.login}'s Github Stats`;
   return (
@@ -82,5 +82,5 @@ async function Fetch(path) {
       },
     })
     .then((data) => data.data)
-    .catch((e) => null);
+    .catch((e) => console.log(e));
 }
