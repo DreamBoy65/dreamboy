@@ -1,7 +1,7 @@
 "use client";
 
 export default async function Npm() {
-  const data = await fetch("/api/npm").then((res) =>
+  const data = await fetch("https://dreamboy.vercel.app/api/npm").then((res) =>
     res.json()
   );
   
