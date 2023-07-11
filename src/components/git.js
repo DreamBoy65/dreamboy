@@ -1,6 +1,6 @@
 "use client";
 export default async function Git() {
-  const user = await fetch("http://localhost:3000/api/github").then((res) => res.json());
+  const user = await fetch("/api/github").then((res) => res.json());
 
   let str = `${user.data.login}'s Github Stats`;
   return (
